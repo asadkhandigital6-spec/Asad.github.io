@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Asad Khan | Digital Marketer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ── SPEECH INTRO OVERLAY ── -->
+<div id="speech-overlay">
+  <div style="display:flex;flex-direction:column;align-items:center;gap:28px;">
+    <div class="speech-box">
+      <img src="images/asad-headshot.png" alt="Asad Khan" class="speech-avatar"/>
+      <div class="speech-wave" id="speechWave">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div id="speech-text">👋 &nbsp;Say hello...</div>
+      <button class="speech-close" onclick="closeIntro()">Skip &nbsp;✕</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── LEFT SOCIAL ICONS ── -->
+<div class="left-icons">
+  <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+  <a href="https://www.linkedin.com/in/muhammad-asad-khan-b22606419/?skipRedirect=true" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+  <a href="https://www.instagram.com/asadlodhi_143/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+</div>
+
+<!-- ── NAVBAR ── -->
+<nav id="navbar">
+  <span class="nav-logo">Asad Khan</span>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-social-links">
+      <a href="https://www.instagram.com/asadlodhi_143/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/muhammad-asad-khan-b22606419/?skipRedirect=true" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <a href="mailto:asadkhandigital6@gmail.com" class="btn-hire">Hire Me</a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="home">
+  <div class="hero-bg-text">ASAD</div>
+  <span class="sparkle sparkle-1">✦</span>
+  <span class="sparkle sparkle-2">✦</span>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span></span>
+        Available for work · Faisalabad, Pakistan
+      </div>
+      <div class="hero-title">Hi, I'm Asad Khan,</div>
+      <div class="hero-subtitle"><span id="typed-text"></span><span class="typed-cursor">|</span></div>
+      <p class="hero-desc">I craft high-impact digital marketing strategies, build brand presence, and drive real results across Meta, Google, and beyond. Let's grow your brand together.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
+        <a href="mailto:asadkhandigital6@gmail.com" class="btn-ghost"><i class="fas fa-envelope"></i> Email Me</a>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <img src="images/asad-desk.png" alt="Asad Khan at his desk" class="hero-photo"/>
+    </div>
+  </div>
+  <a href="#about" class="scroll-down"><i class="fas fa-arrow-down"></i></a>
+</section>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="about-img-wrap fade-up">
+    <img src="images/asad-headshot.png" alt="Asad Khan" class="about-img"/>
+    <div class="about-badge">⚡ Full Stack<br>Digital Marketer</div>
+  </div>
+  <div class="about-content fade-up">
+    <span class="section-tag">About Me</span>
+    <h2 class="section-title">Turning clicks into <span>customers</span></h2>
+    <p class="about-text">I'm Asad Khan, a passionate Full Stack Digital Marketer from Faisalabad, Pakistan. I specialize in building end-to-end digital marketing systems — from strategy and content to paid ads and analytics.</p>
+    <p class="about-text">With hands-on experience across Meta Ads, Google Ads, SEO, email marketing, and social media management, I help brands grow their online presence and generate measurable ROI.</p>
+    <p class="about-text">📧 asadkhandigital6@gmail.com</p>
+    <div class="about-pills">
+      <span class="pill">📣 Meta Ads</span>
+      <span class="pill">🔍 SEO / SEM</span>
+      <span class="pill">📧 Email Marketing</span>
+      <span class="pill">📊 Analytics</span>
+      <span class="pill">🎯 Google Ads</span>
+      <span class="pill">📱 Social Media</span>
+      <span class="pill">🛒 E-commerce</span>
+      <span class="pill">✍️ Copywriting</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS ── -->
+<section id="skills">
+  <div class="section-header fade-up">
+    <span class="section-tag">What I Do</span>
+    <h2 class="section-title">My <span>Core Skills</span></h2>
+    <p>A complete digital marketing toolkit to grow your brand from zero to hero.</p>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-card fade-up">
+      <div class="skill-icon">📣</div>
+      <h3>Paid Advertising</h3>
+      <p>High-converting ad campaigns on Meta, Google, TikTok, and YouTube that maximize ROAS and minimize wasted spend.</p>
+      <div class="skill-tags"><span class="skill-tag">Meta Ads</span><span class="skill-tag">Google Ads</span><span class="skill-tag">TikTok Ads</span></div>
+    </div>
+    <div class="skill-card fade-up">
+      <div class="skill-icon">🔍</div>
+      <h3>SEO & Content Strategy</h3>
+      <p>Organic growth through keyword research, on-page optimization, link building, and compelling content that ranks.</p>
+      <div class="skill-tags"><span class="skill-tag">On-Page SEO</span><span class="skill-tag">Link Building</span><span class="skill-tag">Content Marketing</span></div>
+    </div>
+    <div class="skill-card fade-up">
+      <div class="skill-icon">📱</div>
+      <h3>Social Media Management</h3>
+      <p>Building authentic brand communities across Instagram, Facebook, LinkedIn, and TikTok with engaging content calendars.</p>
+      <div class="skill-tags"><span class="skill-tag">Instagram</span><span class="skill-tag">Facebook</span><span class="skill-tag">LinkedIn</span></div>
+    </div>
+    <div class="skill-card fade-up">
+      <div class="skill-icon">📧</div>
+      <h3>Email & Automation</h3>
+      <p>Nurture sequences, drip campaigns, and automation flows that convert leads into loyal customers on autopilot.</p>
+      <div class="skill-tags"><span class="skill-tag">Mailchimp</span><span class="skill-tag">ActiveCampaign</span><span class="skill-tag">Klaviyo</span></div>
+    </div>
+    <div class="skill-card fade-up">
+      <div class="skill-icon">📊</div>
+      <h3>Analytics & Reporting</h3>
+      <p>Data-driven decisions powered by GA4, Meta Pixel, GTM, and custom dashboards that turn numbers into insights.</p>
+      <div class="skill-tags"><span class="skill-tag">Google Analytics</span><span class="skill-tag">Meta Pixel</span><span class="skill-tag">GTM</span></div>
+    </div>
+    <div class="skill-card fade-up">
+      <div class="skill-icon">🛒</div>
+      <h3>E-commerce Marketing</h3>
+      <p>Product launches, dropshipping funnels, Shopify store optimization, and scaling brands to 6-7 figures online.</p>
+      <div class="skill-tags"><span class="skill-tag">Shopify</span><span class="skill-tag">WooCommerce</span><span class="skill-tag">Funnels</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROCESS ── -->
+<section id="process">
+  <div class="process-wrap">
+    <div class="process-left fade-up">
+      <span class="section-tag" style="background:rgba(255,45,45,0.1);">My Process</span>
+      <h2>Here's how I turn ideas into <span style="color:var(--red)">real-world results</span></h2>
+      <p style="margin-top:16px;">I follow a structured, creative, and highly data-driven approach to build marketing systems that actually work and scale.</p>
+    </div>
+    <div class="process-grid fade-up">
+      <div class="process-card red"><div class="process-num">01</div><h3>Research</h3><p>Understanding your goals, audience, and competitive landscape to build a rock-solid foundation.</p></div>
+      <div class="process-card light"><div class="process-num">02</div><h3>Strategy</h3><p>Crafting a tailored marketing blueprint with clear KPIs, channel mix, and budget allocation.</p></div>
+      <div class="process-card light"><div class="process-num">03</div><h3>Execute</h3><p>Launching campaigns, creating content, and setting up tracking — everything live and optimized.</p></div>
+      <div class="process-card red"><div class="process-num">04</div><h3>Scale</h3><p>Analyzing data, doubling down on what works, and scaling to maximize your ROI and growth.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PROJECTS ── -->
+<section id="projects">
+  <div class="section-header fade-up">
+    <span class="section-tag">Portfolio</span>
+    <h2 class="section-title">Featured <span>Projects</span></h2>
+    <p>Real campaigns and projects that delivered measurable results for clients.</p>
+  </div>
+  <div class="projects-list">
+    <div class="project-card fade-up">
+      <div class="project-num">01</div>
+      <h3>E-commerce Brand Scale — Meta Ads</h3>
+      <p>Managed a full Meta Ads funnel for a clothing brand — from cold audience prospecting to retargeting warm traffic. Achieved 4.2x ROAS within 60 days, scaling from $500/month to $8,000/month in ad spend.</p>
+      <div class="project-techs"><span class="tech-tag">Meta Ads</span><span class="tech-tag">Retargeting</span><span class="tech-tag">Creative Strategy</span><span class="tech-tag">Shopify</span></div>
+      <div class="project-links"><a href="#contact" class="btn-sm accent">Get Similar Results →</a></div>
+    </div>
+    <div class="project-card fade-up">
+      <div class="project-num">02</div>
+      <h3>Local Business Lead Generation — Google Ads</h3>
+      <p>Built a complete Google Ads + landing page system for a local services company. Reduced cost-per-lead by 58% while tripling monthly lead volume through tight keyword targeting and A/B tested landing pages.</p>
+      <div class="project-techs"><span class="tech-tag">Google Ads</span><span class="tech-tag">Landing Pages</span><span class="tech-tag">A/B Testing</span><span class="tech-tag">Analytics</span></div>
+      <div class="project-links"><a href="#contact" class="btn-sm accent">Work Together →</a></div>
+    </div>
+    <div class="project-card fade-up">
+      <div class="project-num">03</div>
+      <h3>Instagram & TikTok Growth — 0 to 15K Followers</h3>
+      <p>Grew a personal brand from 0 to 15K followers in 4 months using educational reels, trending audio, and consistent posting schedules. Achieved 8% average engagement rate.</p>
+      <div class="project-techs"><span class="tech-tag">Instagram</span><span class="tech-tag">TikTok</span><span class="tech-tag">Content Strategy</span><span class="tech-tag">Reels</span></div>
+      <div class="project-links"><a href="https://www.instagram.com/asadlodhi_143/" target="_blank" class="btn-sm dark"><i class="fab fa-instagram"></i> View Profile</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ── -->
+<section id="experience">
+  <div style="max-width:1200px;margin:0 auto;position:relative;z-index:2;">
+    <div class="section-header fade-up">
+      <span class="section-tag" style="background:rgba(0,0,0,0.15);color:var(--white);border-color:rgba(255,255,255,0.3);">Work Experience</span>
+      <h2 class="section-title" style="color:var(--white);">Where I've <span style="color:rgba(255,255,255,0.7)">Made Impact</span></h2>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card fade-up"><div class="exp-icon">🚀</div><h3>Digital Marketing Specialist</h3><div class="exp-company">Freelance · 2022 – Present</div><p>Managing full-funnel campaigns for e-commerce, local businesses, and personal brands globally across Meta, Google, SEO, and email.</p></div>
+      <div class="exp-card fade-up"><div class="exp-icon">📊</div><h3>Social Media Manager</h3><div class="exp-company">Digital Agency · 2023 – 2024</div><p>Managed content calendars, paid social, and community management for 10+ brand accounts. Drove consistent follower growth and engagement.</p></div>
+      <div class="exp-card fade-up"><div class="exp-icon">🎯</div><h3>Performance Marketing Lead</h3><div class="exp-company">E-commerce Brand · 2024 – Present</div><p>Leading paid advertising strategy across Meta and Google for a DTC brand. Responsible for budget allocation, creative testing, and scaling.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CERTIFICATIONS ── -->
+<section id="certifications">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="section-header fade-up">
+      <span class="section-tag">Certifications</span>
+      <h2 class="section-title">Industry-Recognized <span style="color:rgba(255,255,255,0.7)">Credentials</span></h2>
+      <p>Certifications that validate my expertise and keep me cutting edge.</p>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card fade-up"><div class="cert-icon">🔵</div><div><h4>Meta Certified Digital Marketing Associate</h4><div class="cert-issuer">Meta · 2024</div></div></div>
+      <div class="cert-card fade-up"><div class="cert-icon">🔴</div><div><h4>Google Ads Search Certification</h4><div class="cert-issuer">Google · 2024</div></div></div>
+      <div class="cert-card fade-up"><div class="cert-icon">🟢</div><div><h4>HubSpot Email Marketing Certified</h4><div class="cert-issuer">HubSpot Academy · 2023</div></div></div>
+      <div class="cert-card fade-up"><div class="cert-icon">🟡</div><div><h4>Google Analytics 4 (GA4) Certified</h4><div class="cert-issuer">Google · 2024</div></div></div>
+      <div class="cert-card fade-up"><div class="cert-icon">🟠</div><div><h4>SEMrush SEO Fundamentals</h4><div class="cert-issuer">SEMrush · 2023</div></div></div>
+      <div class="cert-card fade-up"><div class="cert-icon">🟣</div><div><h4>Shopify Partner Certification</h4><div class="cert-issuer">Shopify · 2024</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="contact-wrap">
+    <div class="contact-left fade-up">
+      <span class="section-tag">Contact</span>
+      <h2>Let's build something <span style="color:var(--red)">great</span> together</h2>
+      <p>Have a project in mind? Send me a message — I typically respond within 24 hours.</p>
+      <div class="contact-info">
+        <div class="contact-item"><i class="fas fa-envelope"></i>asadkhandigital6@gmail.com</div>
+        <div class="contact-item"><i class="fas fa-map-marker-alt"></i>Faisalabad, Punjab, Pakistan</div>
+        <div class="contact-item"><i class="fab fa-instagram"></i><a href="https://www.instagram.com/asadlodhi_143/" target="_blank" style="color:inherit;">@asadlodhi_143</a></div>
+        <div class="contact-item"><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/muhammad-asad-khan-b22606419/?skipRedirect=true" target="_blank" style="color:inherit;">Muhammad Asad Khan</a></div>
+      </div>
+    </div>
+    <div class="contact-right fade-up">
+      <div class="reach-label">REACH ME</div>
+      <a href="https://www.instagram.com/asadlodhi_143/" class="dm-btn" target="_blank"><i class="fab fa-instagram"></i> DM ON INSTAGRAM</a>
+
+      <!-- NOTE: This is a static HTML form. It opens the visitor's email app
+           pre-filled with their message (mailto). If you want messages saved
+           automatically to a file on your PC, you need the Python/Flask
+           version of this site instead — plain HTML/JS can't write files
+           to disk by itself for security reasons. -->
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="form-group"><label>First Name</label><input type="text" id="cf-first" placeholder="John" required/></div>
+          <div class="form-group"><label>Last Name</label><input type="text" id="cf-last" placeholder="Doe"/></div>
+        </div>
+        <div class="form-group"><label>Email</label><input type="email" id="cf-email" placeholder="john@example.com" required/></div>
+        <div class="form-group"><label>Message</label><textarea id="cf-msg" placeholder="Type your message here..." required></textarea></div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="cf-perm" checked/>
+          <label for="cf-perm">I give permission to contact me at this email address.</label>
+        </div>
+        <button type="submit" class="btn-send" id="sendBtn">Send Message <i class="fas fa-arrow-right"></i></button>
+        <div class="success-msg" id="successMsg">✅ Opening your email app to send this message to Asad...</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<div class="footer-name">asad khan</div>
+<footer>
+  <div class="footer-col">
+    <h4>SPECIALTY</h4>
+    <p>Digital Marketing & Growth<br>Meta · Google · SEO · Email<br>Full Stack Marketing</p>
+  </div>
+  <div class="footer-col" style="text-align:center;">
+    <h4>FIND ME</h4>
+    <p>
+      <a href="https://www.instagram.com/asadlodhi_143/" target="_blank" style="color:var(--red);">Instagram ↗</a><br>
+      <a href="https://www.linkedin.com/in/muhammad-asad-khan-b22606419/?skipRedirect=true" target="_blank" style="color:var(--red);">LinkedIn ↗</a>
+    </p>
+  </div>
+  <div class="footer-col" style="text-align:right;">
+    <h4>AVAILABILITY</h4>
+    <p>Available for opportunities<br>2026</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
