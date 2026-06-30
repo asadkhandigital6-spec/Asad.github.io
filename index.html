@@ -250,24 +250,22 @@
       <div class="reach-label">REACH ME</div>
       <a href="https://www.instagram.com/asadlodhi_143/" class="dm-btn" target="_blank"><i class="fab fa-instagram"></i> DM ON INSTAGRAM</a>
 
-      <!-- NOTE: This is a static HTML form. It opens the visitor's email app
-           pre-filled with their message (mailto). If you want messages saved
-           automatically to a file on your PC, you need the Python/Flask
-           version of this site instead — plain HTML/JS can't write files
-           to disk by itself for security reasons. -->
-      <form id="contactForm">
+      <!-- This form sends messages to Asad's Formspree inbox, which forwards
+           them straight to his Gmail. Works perfectly on GitHub Pages
+           since no backend/server is needed — Formspree handles it. -->
+      <form id="contactForm" action="https://formspree.io/f/mojonejg" method="POST">
         <div class="form-row">
-          <div class="form-group"><label>First Name</label><input type="text" id="cf-first" placeholder="John" required/></div>
-          <div class="form-group"><label>Last Name</label><input type="text" id="cf-last" placeholder="Doe"/></div>
+          <div class="form-group"><label>First Name</label><input type="text" id="cf-first" name="first_name" placeholder="John" required/></div>
+          <div class="form-group"><label>Last Name</label><input type="text" id="cf-last" name="last_name" placeholder="Doe"/></div>
         </div>
-        <div class="form-group"><label>Email</label><input type="email" id="cf-email" placeholder="john@example.com" required/></div>
-        <div class="form-group"><label>Message</label><textarea id="cf-msg" placeholder="Type your message here..." required></textarea></div>
+        <div class="form-group"><label>Email</label><input type="email" id="cf-email" name="email" placeholder="john@example.com" required/></div>
+        <div class="form-group"><label>Message</label><textarea id="cf-msg" name="message" placeholder="Type your message here..." required></textarea></div>
         <div class="checkbox-row">
           <input type="checkbox" id="cf-perm" checked/>
           <label for="cf-perm">I give permission to contact me at this email address.</label>
         </div>
         <button type="submit" class="btn-send" id="sendBtn">Send Message <i class="fas fa-arrow-right"></i></button>
-        <div class="success-msg" id="successMsg">✅ Opening your email app to send this message to Asad...</div>
+        <div class="success-msg" id="successMsg">✅ Message sent! Asad will reply within 24 hours.</div>
       </form>
     </div>
   </div>
