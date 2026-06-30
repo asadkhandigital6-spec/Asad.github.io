@@ -118,18 +118,19 @@ window.addEventListener("scroll", () => {
 });
 
 // ─────────────────────────────────────────────────────────────────
-// 5.  CONTACT FORM
-//     Pure HTML/JS cannot save files to your PC by itself (browser
-//     security restriction). This opens the visitor's email app with
-//     the message pre-filled, addressed to your inbox, so you still
-//     receive everything automatically.
+// 5.  CONTACT FORM → Formspree
+//     Sends the message to Asad's Formspree inbox, which forwards it
+//     straight to his Gmail. Works on GitHub Pages with no backend.
 // ─────────────────────────────────────────────────────────────────
-document.getElementById('contactForm').addEventListener('submit', function (e) {
+const contactForm = document.getElementById('contactForm');
+
+contactForm.addEventListener('submit', async function (e) {
   e.preventDefault();
 
   const btn = document.getElementById('sendBtn');
+  const successMsg = document.getElementById('successMsg');
+
   const first = document.getElementById('cf-first').value.trim();
-  const last = document.getElementById('cf-last').value.trim();
   const email = document.getElementById('cf-email').value.trim();
   const msg = document.getElementById('cf-msg').value.trim();
 
@@ -138,16 +139,36 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
     return;
   }
 
-  const subject = encodeURIComponent(`Portfolio Contact from ${first} ${last}`);
-  const body = encodeURIComponent(
-    `Name: ${first} ${last}\nEmail: ${email}\n\nMessage:\n${msg}`
-  );
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+  successMsg.style.display = 'none';
 
-  window.location.href = `mailto:asadkhandigital6@gmail.com?subject=${subject}&body=${body}`;
+  try {
+    const response = await fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { 'Accept': 'application/json' }
+    });
 
-  document.getElementById('successMsg').style.display = 'block';
-  btn.innerHTML = '✅ Opening Email App...';
-  setTimeout(() => {
+    if (response.ok) {
+      successMsg.textContent = '✅ Message sent! Asad will reply within 24 hours.';
+      successMsg.style.display = 'block';
+      contactForm.reset();
+      btn.innerHTML = '✅ Sent!';
+    } else {
+      throw new Error('Formspree error');
+    }
+  } catch (err) {
+    successMsg.textContent = '⚠️ Something went wrong. Please email asadkhandigital6@gmail.com directly.';
+    successMsg.style.background = 'rgba(255,45,45,0.1)';
+    successMsg.style.borderColor = 'rgba(255,45,45,0.3)';
+    successMsg.style.color = '#FF5555';
+    successMsg.style.display = 'block';
     btn.innerHTML = 'Send Message <i class="fas fa-arrow-right"></i>';
-  }, 3000);
+  } finally {
+    setTimeout(() => {
+      btn.innerHTML = 'Send Message <i class="fas fa-arrow-right"></i>';
+      btn.disabled = false;
+    }, 3000);
+  }
 });
