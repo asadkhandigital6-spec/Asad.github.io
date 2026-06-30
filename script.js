@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────────────────────────────
 // 1.  VOICE INTRO  (Web Speech API — built into every browser)
 // ─────────────────────────────────────────────────────────────────
-const INTRO_TEXT = "Hi! I am Asad Khan. A Full Stack Digital Marketer from Faisalabad, Pakistan. I help brands grow through Meta Ads, Google Ads, SEO, and Social Media. Let's work together!";
+const INTRO_TEXT = "Hi! I am Asad Khan. A Digital Marketer from Faisalabad, Pakistan, currently learning paid ads and building my web development skills. Let's grow together!";
 
 let introSpoken = false;
 
@@ -75,11 +75,11 @@ if (!sessionStorage.getItem('introShown')) {
 // 2.  TYPED TEXT
 // ─────────────────────────────────────────────────────────────────
 const phrases = [
-  "Full Stack Digital Marketer",
-  "Meta & Google Ads Expert",
-  "SEO & Content Strategist",
-  "Brand Growth Specialist",
-  "E-commerce Marketing Pro"
+  "Digital Marketing Intern",
+  "Self-Taught Web Developer",
+  "Learning Paid Ads",
+  "Content & Social Media",
+  "Growing Every Day"
 ];
 let phraseIdx = 0, charIdx = 0, deleting = false;
 const typedEl = document.getElementById("typed-text");
