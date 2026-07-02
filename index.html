@@ -26,7 +26,7 @@
 
 <!-- ── LEFT SOCIAL ICONS ── -->
 <div class="left-icons">
-  <a href="https://github.com/asadkhandigital6-spec" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+  <a href="https://github.com" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
   <a href="https://www.linkedin.com/in/muhammad-asad-khan-b22606419/?skipRedirect=true" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
   <a href="https://www.instagram.com/asadlodhi_143/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
 </div>
@@ -87,7 +87,7 @@
     <span class="section-tag">About Me</span>
     <h2 class="section-title">Turning clicks into <span>customers</span></h2>
     <p class="about-text">I'm Asad Khan, a Digital Marketer from Faisalabad, Pakistan, currently growing my skills in performance marketing and web development. I completed a hands-on internship at KB Digital Marketing Agency, where I worked on social media management, content creation, basic SEO, and campaign support.</p>
-    <p class="about-text">I'm currently deepening my paid ads skills through senatorwerunads.com, and I also build and deploy my own web projects — including this very portfolio site. I'm early in my career but committed to learning fast and delivering real results for the brands I work with.</p>
+    <p class="about-text">I'm currently deepening my paid ads skills through WeRunAds.com, and I also build and deploy my own web projects — including this very portfolio site. I'm early in my career but committed to learning fast and delivering real results for the brands I work with.</p>
     <p class="about-text">📧 asadkhandigital6@gmail.com</p>
     <div class="about-pills">
       <span class="pill">📣 Social Media Management</span>
@@ -129,7 +129,7 @@
     <div class="skill-card fade-up">
       <div class="skill-icon">🎯</div>
       <h3>Paid Ads <span style="font-size:0.7rem;background:var(--red);padding:2px 8px;border-radius:50px;margin-left:6px;vertical-align:middle;">Learning</span></h3>
-      <p>Currently building my paid advertising skills through senatorwerunads.com, — learning Meta and Google Ads campaign structure, targeting, and optimization.</p>
+      <p>Currently building my paid advertising skills through WeRunAds.com — learning Meta and Google Ads campaign structure, targeting, and optimization.</p>
       <div class="skill-tags"><span class="skill-tag">Meta Ads</span><span class="skill-tag">Google Ads</span></div>
     </div>
     <div class="skill-card fade-up">
@@ -188,8 +188,8 @@
     </div>
     <div class="project-card fade-up">
       <div class="project-num">03</div>
-      <h3>Currently Learning — Paid Ads via senatorwerunads.com</h3>
-      <p>Actively building my skills in Meta and Google Ads campaign management through structured learning at senatorwerunads.com, applying what I learn to practice campaigns as I go.</p>
+      <h3>Currently Learning — Paid Ads via WeRunAds.com</h3>
+      <p>Actively building my skills in Meta and Google Ads campaign management through structured learning at WeRunAds.com, applying what I learn to practice campaigns as I go.</p>
       <div class="project-techs"><span class="tech-tag">Meta Ads</span><span class="tech-tag">Google Ads</span><span class="tech-tag">In Progress</span></div>
       <div class="project-links"><a href="https://www.instagram.com/asadlodhi_143/" target="_blank" class="btn-sm dark"><i class="fab fa-instagram"></i> Follow My Journey</a></div>
     </div>
@@ -236,13 +236,17 @@
       <div class="contact-info">
         <div class="contact-item"><i class="fas fa-envelope"></i>asadkhandigital6@gmail.com</div>
         <div class="contact-item"><i class="fas fa-map-marker-alt"></i>Faisalabad, Punjab, Pakistan</div>
+        <div class="contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/923209835916" target="_blank" style="color:inherit;">+92 320 983 5916 (WhatsApp)</a></div>
         <div class="contact-item"><i class="fab fa-instagram"></i><a href="https://www.instagram.com/asadlodhi_143/" target="_blank" style="color:inherit;">@asadlodhi_143</a></div>
         <div class="contact-item"><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/muhammad-asad-khan-b22606419/?skipRedirect=true" target="_blank" style="color:inherit;">Muhammad Asad Khan</a></div>
       </div>
     </div>
     <div class="contact-right fade-up">
       <div class="reach-label">REACH ME</div>
-      <a href="https://www.instagram.com/asadlodhi_143/" class="dm-btn" target="_blank"><i class="fab fa-instagram"></i> DM ON INSTAGRAM</a>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px;">
+        <a href="https://wa.me/923209835916?text=Hi%20Asad!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect." class="dm-btn" target="_blank" style="background:rgba(37,211,102,0.12);border-color:rgba(37,211,102,0.4);color:#25d366;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+        <a href="https://www.instagram.com/asadlodhi_143/" class="dm-btn" target="_blank"><i class="fab fa-instagram"></i> DM on Instagram</a>
+      </div>
 
       <!-- This form sends messages to Asad's Formspree inbox, which forwards
            them straight to his Gmail. Works perfectly on GitHub Pages
@@ -284,6 +288,120 @@
     <p>Available for opportunities<br>2026</p>
   </div>
 </footer>
+
+<!-- ── WHATSAPP FLOATING CHAT BUTTON ── -->
+<div id="wa-bubble">
+  <div id="wa-tooltip">
+    <div id="wa-tooltip-header">
+      <img src="images/asad-headshot.png" alt="Asad Khan" id="wa-avatar"/>
+      <div>
+        <div id="wa-name">Asad Khan</div>
+        <div id="wa-status"><span id="wa-dot"></span> Online</div>
+      </div>
+      <button id="wa-close" onclick="closeWA()">✕</button>
+    </div>
+    <div id="wa-msg-box">
+      <div id="wa-bubble-msg">👋 Hi! I'm Asad. Have a project in mind or need a freelance website? Chat with me on WhatsApp — I usually reply within minutes!</div>
+    </div>
+    <a href="https://wa.me/923209835916?text=Hi%20Asad!%20I%20saw%20your%20portfolio%20website%20and%20I%27d%20like%20to%20connect." target="_blank" id="wa-start-btn"><i class="fab fa-whatsapp"></i> Start Chat</a>
+  </div>
+  <button id="wa-fab" onclick="toggleWA()" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp" id="wa-icon-main"></i>
+    <span id="wa-badge">1</span>
+  </button>
+</div>
+
+<style>
+/* ── WhatsApp Floating Button ── */
+#wa-bubble { position: fixed; bottom: 28px; right: 28px; z-index: 9000; font-family: 'Inter', sans-serif; }
+#wa-fab {
+  width: 60px; height: 60px; border-radius: 50%;
+  background: #25d366; border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 28px rgba(37,211,102,0.5);
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+#wa-fab:hover { transform: scale(1.1); box-shadow: 0 10px 36px rgba(37,211,102,0.6); }
+#wa-fab i { font-size: 1.8rem; color: #fff; }
+#wa-badge {
+  position: absolute; top: -4px; right: -4px;
+  background: var(--red); color: #fff;
+  width: 20px; height: 20px; border-radius: 50%;
+  font-size: 0.7rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  animation: badgePop 1s ease infinite alternate;
+}
+@keyframes badgePop { from{transform:scale(1)} to{transform:scale(1.2)} }
+
+/* Tooltip popup */
+#wa-tooltip {
+  display: none;
+  position: absolute; bottom: 76px; right: 0;
+  width: 300px;
+  background: #fff; border-radius: 16px;
+  box-shadow: 0 16px 60px rgba(0,0,0,0.2);
+  overflow: hidden;
+  animation: slideUp 0.3s cubic-bezier(0.34,1.56,0.64,1);
+}
+@keyframes slideUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+#wa-tooltip.open { display: block; }
+
+#wa-tooltip-header {
+  background: #075e54;
+  padding: 14px 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+#wa-avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; object-position: top; border: 2px solid rgba(255,255,255,0.3); flex-shrink: 0; }
+#wa-name { color: #fff; font-weight: 700; font-size: 0.92rem; }
+#wa-status { color: rgba(255,255,255,0.75); font-size: 0.75rem; display: flex; align-items: center; gap: 5px; margin-top: 2px; }
+#wa-dot { width: 7px; height: 7px; border-radius: 50%; background: #25d366; display: inline-block; animation: pulse 2s infinite; }
+#wa-close { margin-left: auto; background: transparent; border: none; color: rgba(255,255,255,0.7); font-size: 1rem; cursor: pointer; flex-shrink: 0; }
+#wa-close:hover { color: #fff; }
+
+#wa-msg-box { background: #ece5dd; padding: 16px; }
+#wa-bubble-msg {
+  background: #fff;
+  border-radius: 0 12px 12px 12px;
+  padding: 12px 14px;
+  font-size: 0.85rem; color: #333; line-height: 1.55;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  position: relative;
+}
+#wa-bubble-msg::before {
+  content: ''; position: absolute; top: 0; left: -8px;
+  border: 8px solid transparent; border-top-color: #fff; border-right-color: #fff;
+}
+
+#wa-start-btn {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  background: #25d366; color: #fff;
+  padding: 14px; font-size: 0.9rem; font-weight: 700;
+  text-decoration: none; transition: background 0.2s;
+}
+#wa-start-btn:hover { background: #128c7e; }
+#wa-start-btn i { font-size: 1.1rem; }
+</style>
+
+<script>
+function toggleWA() {
+  const tip = document.getElementById('wa-tooltip');
+  const badge = document.getElementById('wa-badge');
+  tip.classList.toggle('open');
+  badge.style.display = 'none'; // hide badge once opened
+}
+function closeWA() {
+  document.getElementById('wa-tooltip').classList.remove('open');
+}
+// Auto-open after 8 seconds if visitor hasn't opened it
+setTimeout(() => {
+  const tip = document.getElementById('wa-tooltip');
+  if (!tip.classList.contains('open')) {
+    tip.classList.add('open');
+    document.getElementById('wa-badge').style.display = 'none';
+  }
+}, 8000);
+</script>
 
 <script src="script.js"></script>
 </body>
