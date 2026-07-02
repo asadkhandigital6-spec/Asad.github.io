@@ -24,7 +24,273 @@
   </div>
 </div>
 
-<!-- ── LEFT SOCIAL ICONS ── -->
+<!-- ── HIRE ME MODAL ── -->
+<div id="hire-overlay" onclick="closeHireModal(event)">
+  <div id="hire-modal">
+    <div id="hire-modal-inner">
+
+      <!-- Left decorative panel -->
+      <div id="hire-left">
+        <div id="hire-left-content">
+          <div id="hire-avatar-wrap">
+            <img src="images/asad-headshot.png" alt="Asad Khan" id="hire-avatar"/>
+            <div id="hire-avatar-ring"></div>
+          </div>
+          <h3>Let's Work Together</h3>
+          <p>Tell me about your project and I'll get back to you within 24 hours.</p>
+          <div class="hire-contact-pill"><i class="fab fa-whatsapp"></i> +92 320 983 5916</div>
+          <div class="hire-contact-pill"><i class="fas fa-envelope"></i> asadkhandigital6@gmail.com</div>
+          <div id="hire-sparkles">
+            <span>✦</span><span>✦</span><span>✦</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right form panel -->
+      <div id="hire-right">
+        <div id="hire-header">
+          <h2 id="hire-title">Hire Me 🚀</h2>
+          <p id="hire-subtitle">Fill in the details — I'll respond fast.</p>
+          <button id="hire-close-btn" onclick="closeHireModal()">✕</button>
+        </div>
+
+        <form id="hireForm" action="https://formspree.io/f/mojonejg" method="POST">
+          <input type="hidden" name="_subject" value="New Hire Me Request from Portfolio"/>
+
+          <div class="hire-row">
+            <div class="hire-group">
+              <label>Full Name <span class="req">*</span></label>
+              <div class="hire-input-wrap"><i class="fas fa-user"></i><input type="text" name="name" placeholder="John Doe" required/></div>
+            </div>
+            <div class="hire-group">
+              <label>Email Address <span class="req">*</span></label>
+              <div class="hire-input-wrap"><i class="fas fa-envelope"></i><input type="email" name="email" placeholder="john@email.com" required/></div>
+            </div>
+          </div>
+
+          <div class="hire-row">
+            <div class="hire-group">
+              <label>WhatsApp / Phone</label>
+              <div class="hire-input-wrap"><i class="fab fa-whatsapp"></i><input type="text" name="phone" placeholder="+1 234 567 8900"/></div>
+            </div>
+            <div class="hire-group">
+              <label>Service Needed <span class="req">*</span></label>
+              <div class="hire-input-wrap hire-select-wrap"><i class="fas fa-briefcase"></i>
+                <select name="service" required>
+                  <option value="" disabled selected>Select a service</option>
+                  <option>Portfolio / Freelance Website</option>
+                  <option>Social Media Management</option>
+                  <option>Content Creation</option>
+                  <option>SEO Basics</option>
+                  <option>Meta / Google Ads</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="hire-row">
+            <div class="hire-group">
+              <label>Your Budget</label>
+              <div class="hire-input-wrap hire-select-wrap"><i class="fas fa-dollar-sign"></i>
+                <select name="budget">
+                  <option value="" disabled selected>Select budget range</option>
+                  <option>Under $20</option>
+                  <option>$20 – $50</option>
+                  <option>$50 – $100</option>
+                  <option>$100 – $300</option>
+                  <option>$300+</option>
+                  <option>Let's discuss</option>
+                </select>
+              </div>
+            </div>
+            <div class="hire-group">
+              <label>Timeline</label>
+              <div class="hire-input-wrap hire-select-wrap"><i class="fas fa-clock"></i>
+                <select name="timeline">
+                  <option value="" disabled selected>When do you need it?</option>
+                  <option>ASAP</option>
+                  <option>Within 1 week</option>
+                  <option>Within 2 weeks</option>
+                  <option>Within a month</option>
+                  <option>No rush</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="hire-group" style="margin-bottom:20px;">
+            <label>Project Details <span class="req">*</span></label>
+            <div class="hire-input-wrap hire-textarea-wrap"><i class="fas fa-pencil-alt"></i><textarea name="project_details" placeholder="Describe your project — what you need, your goals, any specific requirements..." required></textarea></div>
+          </div>
+
+          <div class="hire-group" style="margin-bottom:24px;">
+            <label>How did you find me?</label>
+            <div class="hire-input-wrap hire-select-wrap"><i class="fas fa-search"></i>
+              <select name="source">
+                <option value="" disabled selected>Select one</option>
+                <option>LinkedIn</option>
+                <option>Instagram</option>
+                <option>WhatsApp</option>
+                <option>Referred by a friend</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" id="hire-submit-btn">
+            <span id="hire-btn-text"><i class="fas fa-paper-plane"></i> Send My Request</span>
+            <span id="hire-btn-loading" style="display:none;"><i class="fas fa-spinner fa-spin"></i> Sending...</span>
+          </button>
+          <div id="hire-success">🎉 Request sent! Asad will reply within 24 hours.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+/* ── HIRE ME MODAL ── */
+#hire-overlay {
+  position: fixed; inset: 0; z-index: 8000;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(8px);
+  display: none; align-items: center; justify-content: center;
+  padding: 20px;
+  opacity: 0; transition: opacity 0.3s ease;
+}
+#hire-overlay.open { display: flex; }
+#hire-overlay.visible { opacity: 1; }
+
+#hire-modal {
+  width: 100%; max-width: 860px; max-height: 90vh; overflow-y: auto;
+  border-radius: 24px;
+  transform: translateY(40px) scale(0.95);
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), opacity 0.3s ease;
+  opacity: 0;
+  scrollbar-width: thin; scrollbar-color: var(--red) transparent;
+}
+#hire-overlay.visible #hire-modal { transform: translateY(0) scale(1); opacity: 1; }
+
+#hire-modal-inner { display: flex; min-height: 560px; border-radius: 24px; overflow: hidden; }
+
+/* Left decorative side */
+#hire-left {
+  background: linear-gradient(145deg, #FF2D2D, #8B0000);
+  flex: 0 0 240px;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+  padding: 32px 24px;
+}
+#hire-left::before {
+  content: ''; position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+#hire-left-content { position: relative; z-index: 1; text-align: center; }
+#hire-avatar-wrap { position: relative; display: inline-block; margin-bottom: 20px; }
+#hire-avatar { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; object-position: top; border: 3px solid rgba(255,255,255,0.5); }
+#hire-avatar-ring {
+  position: absolute; inset: -6px; border-radius: 50%;
+  border: 2px dashed rgba(255,255,255,0.4);
+  animation: spin 8s linear infinite;
+}
+#hire-left-content h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
+#hire-left-content p { color: rgba(255,255,255,0.8); font-size: 0.8rem; line-height: 1.6; margin-bottom: 20px; }
+.hire-contact-pill {
+  background: rgba(0,0,0,0.2); color: rgba(255,255,255,0.9);
+  border-radius: 50px; padding: 7px 12px; font-size: 0.72rem;
+  margin-bottom: 8px; display: flex; align-items: center; gap: 7px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+#hire-sparkles { margin-top: 20px; display: flex; justify-content: center; gap: 12px; }
+#hire-sparkles span { color: rgba(255,255,255,0.4); font-size: 1.2rem; animation: pulse 2s infinite; }
+#hire-sparkles span:nth-child(2) { animation-delay: 0.4s; }
+#hire-sparkles span:nth-child(3) { animation-delay: 0.8s; }
+
+/* Right form side */
+#hire-right {
+  flex: 1; background: #0f0f0f;
+  padding: 32px 32px 28px;
+  display: flex; flex-direction: column;
+}
+#hire-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 24px; }
+#hire-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
+#hire-subtitle { color: #888; font-size: 0.85rem; }
+#hire-close-btn {
+  background: rgba(255,255,255,0.08); border: none; color: #888;
+  width: 34px; height: 34px; border-radius: 50%; cursor: pointer;
+  font-size: 1rem; transition: all 0.2s; flex-shrink: 0;
+}
+#hire-close-btn:hover { background: var(--red); color: #fff; }
+
+.hire-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.hire-group { display: flex; flex-direction: column; }
+.hire-group label { font-size: 0.75rem; color: #888; margin-bottom: 7px; font-weight: 500; letter-spacing: 0.5px; }
+.req { color: var(--red); }
+.hire-input-wrap {
+  position: relative; display: flex; align-items: center;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px; overflow: hidden;
+  transition: all 0.2s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.04);
+}
+.hire-input-wrap:focus-within {
+  border-color: var(--red);
+  box-shadow: 0 0 0 3px rgba(255,45,45,0.12), 0 4px 20px rgba(255,45,45,0.1);
+  background: rgba(255,45,45,0.03);
+}
+.hire-input-wrap > i {
+  padding: 0 12px; color: #555; font-size: 0.85rem; flex-shrink: 0;
+  transition: color 0.2s;
+}
+.hire-input-wrap:focus-within > i { color: var(--red); }
+.hire-input-wrap input,
+.hire-input-wrap select,
+.hire-input-wrap textarea {
+  flex: 1; background: transparent; border: none; outline: none;
+  color: #fff; font-family: inherit; font-size: 0.88rem;
+  padding: 12px 12px 12px 0;
+}
+.hire-input-wrap input::placeholder,
+.hire-input-wrap textarea::placeholder { color: #444; }
+.hire-input-wrap select { cursor: pointer; }
+.hire-input-wrap select option { background: #1a1a1a; color: #fff; }
+.hire-textarea-wrap { align-items: flex-start; }
+.hire-textarea-wrap i { padding-top: 13px; }
+.hire-input-wrap textarea { resize: none; height: 100px; }
+
+#hire-submit-btn {
+  width: 100%; padding: 14px;
+  background: linear-gradient(135deg, var(--red), #ff6b6b);
+  color: #fff; border: none; border-radius: 12px;
+  font-size: 0.95rem; font-weight: 700; cursor: pointer;
+  font-family: inherit; transition: all 0.2s;
+  box-shadow: 0 4px 20px rgba(255,45,45,0.35);
+  position: relative; overflow: hidden;
+}
+#hire-submit-btn::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, transparent, rgba(255,255,255,0.1));
+  transition: opacity 0.2s;
+}
+#hire-submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(255,45,45,0.5); }
+#hire-submit-btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+#hire-success {
+  display: none; margin-top: 14px;
+  background: rgba(0,255,136,0.08); border: 1px solid rgba(0,255,136,0.25);
+  color: #00ff88; padding: 12px 16px; border-radius: 10px;
+  font-size: 0.88rem; text-align: center;
+}
+
+/* Mobile responsive */
+@media(max-width: 680px) {
+  #hire-left { display: none; }
+  #hire-modal-inner { flex-direction: column; }
+  .hire-row { grid-template-columns: 1fr; }
+  #hire-right { padding: 24px 20px; }
+}
+</style>
 <div class="left-icons">
   <a href="https://github.com/asadlodhi143" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
   <a href="https://www.linkedin.com/in/muhammad-asad-khan-b22606419/?skipRedirect=true" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -43,10 +309,11 @@
   </ul>
   <div class="nav-right">
     <div class="nav-social-links">
+      <a href="https://github.com/asadlodhi143" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
       <a href="https://www.instagram.com/asadlodhi_143/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
       <a href="https://www.linkedin.com/in/muhammad-asad-khan-b22606419/?skipRedirect=true" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
     </div>
-    <a href="mailto:asadkhandigital6@gmail.com" class="btn-hire">Hire Me</a>
+    <button class="btn-hire" onclick="openHireModal()">Hire Me ✨</button>
   </div>
 </nav>
 
@@ -87,7 +354,7 @@
     <span class="section-tag">About Me</span>
     <h2 class="section-title">Turning clicks into <span>customers</span></h2>
     <p class="about-text">I'm Asad Khan, a Digital Marketer from Faisalabad, Pakistan, currently growing my skills in performance marketing and web development. I completed a hands-on internship at KB Digital Marketing Agency, where I worked on social media management, content creation, basic SEO, and campaign support.</p>
-    <p class="about-text">I'm currently deepening my paid ads skills through senatorwerunads.com, and I also build and deploy my own web projects — including this very portfolio site. I'm early in my career but committed to learning fast and delivering real results for the brands I work with.</p>
+    <p class="about-text">I'm currently deepening my paid ads skills through SenatorWeRunAds.com, and I also build and deploy my own web projects — including this very portfolio site. I'm early in my career but committed to learning fast and delivering real results for the brands I work with.</p>
     <p class="about-text">📧 asadkhandigital6@gmail.com</p>
     <div class="about-pills">
       <span class="pill">📣 Social Media Management</span>
@@ -129,7 +396,7 @@
     <div class="skill-card fade-up">
       <div class="skill-icon">🎯</div>
       <h3>Paid Ads <span style="font-size:0.7rem;background:var(--red);padding:2px 8px;border-radius:50px;margin-left:6px;vertical-align:middle;">Learning</span></h3>
-      <p>Currently building my paid advertising skills through senatorwerunads.com — learning Meta and Google Ads campaign structure, targeting, and optimization.</p>
+      <p>Currently building my paid advertising skills through SenatorWeRunAds.com — learning Meta and Google Ads campaign structure, targeting, and optimization.</p>
       <div class="skill-tags"><span class="skill-tag">Meta Ads</span><span class="skill-tag">Google Ads</span></div>
     </div>
     <div class="skill-card fade-up">
@@ -188,8 +455,8 @@
     </div>
     <div class="project-card fade-up">
       <div class="project-num">03</div>
-      <h3>Currently Learning — Paid Ads via WeRunAds.com</h3>
-      <p>Actively building my skills in Meta and Google Ads campaign management through structured learning at senatorwerunads.com, applying what I learn to practice campaigns as I go.</p>
+      <h3>Currently Learning — Paid Ads via SenatorWeRunAds.com</h3>
+      <p>Actively building my skills in Meta and Google Ads campaign management through structured learning at SenatorWeRunAds.com, applying what I learn to practice campaigns as I go.</p>
       <div class="project-techs"><span class="tech-tag">Meta Ads</span><span class="tech-tag">Google Ads</span><span class="tech-tag">In Progress</span></div>
       <div class="project-links"><a href="https://www.instagram.com/asadlodhi_143/" target="_blank" class="btn-sm dark"><i class="fab fa-instagram"></i> Follow My Journey</a></div>
     </div>
@@ -205,7 +472,7 @@
     </div>
     <div class="exp-grid">
       <div class="exp-card fade-up"><div class="exp-icon">🎓</div><h3>Digital Marketing Intern</h3><div class="exp-company">KB Digital Marketing Agency · May 2026 (1 Month)</div><p>Completed a one-month internship covering social media management, content creation, basic SEO practices, and campaign support. Recognized for dedication, professionalism, and strong communication.</p></div>
-      <div class="exp-card fade-up"><div class="exp-icon">📚</div><h3>Paid Ads Learner</h3><div class="exp-company">senatorwerunads.com · Ongoing</div><p>Currently learning Meta and Google Ads campaign strategy, targeting, and optimization through structured training.</p></div>
+      <div class="exp-card fade-up"><div class="exp-icon">📚</div><h3>Paid Ads Learner</h3><div class="exp-company">SenatorWeRunAds.com · Ongoing</div><p>Currently learning Meta and Google Ads campaign strategy, targeting, and optimization through structured training.</p></div>
       <div class="exp-card fade-up"><div class="exp-icon">💻</div><h3>Self-Taught Web Developer</h3><div class="exp-company">Personal Projects · Ongoing</div><p>Teaching myself web development by building and deploying real projects — including designing and shipping this portfolio site myself.</p></div>
     </div>
   </div>
@@ -237,6 +504,7 @@
         <div class="contact-item"><i class="fas fa-envelope"></i>asadkhandigital6@gmail.com</div>
         <div class="contact-item"><i class="fas fa-map-marker-alt"></i>Faisalabad, Punjab, Pakistan</div>
         <div class="contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/923209835916" target="_blank" style="color:inherit;">+92 320 983 5916 (WhatsApp)</a></div>
+        <div class="contact-item"><i class="fab fa-github"></i><a href="https://github.com/asadlodhi143" target="_blank" style="color:inherit;">github.com/asadlodhi143</a></div>
         <div class="contact-item"><i class="fab fa-instagram"></i><a href="https://www.instagram.com/asadlodhi_143/" target="_blank" style="color:inherit;">@asadlodhi_143</a></div>
         <div class="contact-item"><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/muhammad-asad-khan-b22606419/?skipRedirect=true" target="_blank" style="color:inherit;">Muhammad Asad Khan</a></div>
       </div>
@@ -403,6 +671,68 @@ setTimeout(() => {
 }, 8000);
 </script>
 
+<script>
+// ── HIRE ME MODAL ──────────────────────────────────────────────
+function openHireModal() {
+  const overlay = document.getElementById('hire-overlay');
+  overlay.style.display = 'flex';
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => overlay.classList.add('visible'));
+  });
+  document.body.style.overflow = 'hidden';
+}
+
+function closeHireModal(e) {
+  if (e && e.target !== document.getElementById('hire-overlay') && e.target !== document.getElementById('hire-close-btn')) return;
+  const overlay = document.getElementById('hire-overlay');
+  overlay.classList.remove('visible');
+  setTimeout(() => { overlay.style.display = 'none'; }, 300);
+  document.body.style.overflow = '';
+}
+
+// Close with Escape key
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeHireModal({ target: document.getElementById('hire-overlay') });
+});
+
+// Hire form submit via Formspree fetch (stay on page, show success)
+document.getElementById('hireForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('hire-submit-btn');
+  const btnText = document.getElementById('hire-btn-text');
+  const btnLoad = document.getElementById('hire-btn-loading');
+  const successEl = document.getElementById('hire-success');
+
+  btn.disabled = true;
+  btnText.style.display = 'none';
+  btnLoad.style.display = 'inline';
+
+  try {
+    const res = await fetch(this.action, {
+      method: 'POST',
+      body: new FormData(this),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      successEl.style.display = 'block';
+      this.reset();
+      btnText.innerHTML = '✅ Request Sent!';
+      setTimeout(() => {
+        closeHireModal({ target: document.getElementById('hire-overlay') });
+        btnText.innerHTML = '<i class="fas fa-paper-plane"></i> Send My Request';
+        successEl.style.display = 'none';
+      }, 2500);
+    } else { throw new Error(); }
+  } catch {
+    alert('Something went wrong. Please WhatsApp me directly at +92 320 983 5916');
+    btnText.innerHTML = '<i class="fas fa-paper-plane"></i> Send My Request';
+  } finally {
+    btn.disabled = false;
+    btnText.style.display = 'inline';
+    btnLoad.style.display = 'none';
+  }
+});
+</script>
 <script src="script.js"></script>
 </body>
 </html>
